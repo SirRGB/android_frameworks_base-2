@@ -777,14 +777,13 @@ public class RingtoneManager {
      * Gets the current default sound's {@link Uri}. This will give the actual
      * sound {@link Uri}, instead of using this, most clients can use
      * {@link System#DEFAULT_RINGTONE_URI}.
-     *
+     * 
      * @param context A context used for querying.
      * @param type The type whose default sound should be returned. One of
      *            {@link #TYPE_RINGTONE}, {@link #TYPE_NOTIFICATION}, or
      *            {@link #TYPE_ALARM}.
      * @return A {@link Uri} pointing to the default sound for the sound type.
      * @see #setActualDefaultRingtoneUri(Context, int, Uri)
-     * @hide
      */
     public static Uri getActualDefaultRingtoneUri(Context context, int type) {
         String setting = getSettingForType(type);
@@ -802,17 +801,16 @@ public class RingtoneManager {
 
         return ringtoneUri;
     }
-
+    
     /**
      * Sets the {@link Uri} of the default sound for a given sound type.
-     *
+     * 
      * @param context A context used for querying.
      * @param type The type whose default sound should be set. One of
      *            {@link #TYPE_RINGTONE}, {@link #TYPE_NOTIFICATION}, or
      *            {@link #TYPE_ALARM}.
      * @param ringtoneUri A {@link Uri} pointing to the default sound to set.
      * @see #getActualDefaultRingtoneUri(Context, int)
-     * @hide
      */
     public static void setActualDefaultRingtoneUri(Context context, int type, Uri ringtoneUri) {
         String setting = getSettingForType(type);
